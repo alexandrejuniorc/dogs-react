@@ -13,25 +13,12 @@ export const LoginForm = () => {
   const password = useForm();
   const { userLogin } = useContext(UserContext);
 
-  useEffect(() => {
-    const token = window.localStorage.getItem('token');
-    if (token) {
-      getUser(token);
-    }
-  }, []);
-
-  const getUser = async (token) => {
-    const { url, options } = USER_GET(token);
-    const response = await fetch(url, options);
-    const json = await response.json();
-    console.log(json);
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     // validation of the username and password, if the user exists it will fetch
     if (username.validate() && password.validate()) {
+      userLogin(username.value, password.value);
     }
   };
   return (
