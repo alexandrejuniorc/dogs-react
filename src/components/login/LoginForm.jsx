@@ -5,10 +5,13 @@ import { Input } from '../form/Input';
 import { useForm } from '../../hooks/useForm';
 import { TOKEN_POST, USER_GET } from '../../api/Api';
 import { useEffect } from 'react';
+import { useContext } from 'react';
+import { UserContext } from '../../hooks/userContext';
 
 export const LoginForm = () => {
   const username = useForm();
   const password = useForm();
+  const { userLogin } = useContext(UserContext);
 
   useEffect(() => {
     const token = window.localStorage.getItem('token');
@@ -29,20 +32,16 @@ export const LoginForm = () => {
 
     // validation of the username and password, if the user exists it will fetch
     if (username.validate() && password.validate()) {
-      const { url, options } = TOKEN_POST({
-        username: username.value,
-        password: password.value,
-      });
-
-      // new fetch
-      const response = await fetch(url, options);
-      const json = await response.json();
-
-      window.localStorage.setItem('token', json.token);
-      getUser(json.token);
-
-      console.log(json);
-
+      // const { url, options } = TOKEN_POST({
+      //   username: username.value,
+      //   password: password.value,
+      // });
+      // old fetch
+      // const response = await fetch(url, options);
+      // const json = await response.json();
+      // window.localStorage.setItem('token', json.token);
+      // getUser(json.token);
+      // console.log(json);
       // old fetch
       /* fetch('https://dogsapi.origamid.dev/json/jwt-auth/v1/token', {
         method: 'POST',
