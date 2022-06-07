@@ -19,7 +19,7 @@ export const Header = () => {
             <button onClick={userLogout}>Sair</button>
           </Link>
         ) : (
-          <Link className="login" to="/login">
+          <Link className="loginHeader" to="/login">
             Login / Criar
           </Link>
         )}
