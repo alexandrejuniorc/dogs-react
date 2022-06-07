@@ -32,33 +32,6 @@ export const LoginForm = () => {
 
     // validation of the username and password, if the user exists it will fetch
     if (username.validate() && password.validate()) {
-      // const { url, options } = TOKEN_POST({
-      //   username: username.value,
-      //   password: password.value,
-      // });
-      // old fetch
-      // const response = await fetch(url, options);
-      // const json = await response.json();
-      // window.localStorage.setItem('token', json.token);
-      // getUser(json.token);
-      // console.log(json);
-      // old fetch
-      /* fetch('https://dogsapi.origamid.dev/json/jwt-auth/v1/token', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(),
-      })
-        .then((res) => {
-          console.log(res);
-          return res.json();
-        })
-        .then((data) => {
-          console.log(data);
-        })
-        .catch((erro) => console.log(erro));
-    } */
     }
   };
   return (
