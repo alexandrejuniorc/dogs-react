@@ -26,9 +26,9 @@ export const UserStorage = ({ children }) => {
     const { url, options } = USER_GET(token);
     const response = await fetch(url, options);
     const json = await response.json();
+    console.log(json);
     setData(json);
     setLogin(true);
-    console.log(json);
   };
 
   const userLogin = async (username, password) => {
@@ -63,6 +63,7 @@ export const UserStorage = ({ children }) => {
           setLoading(true);
           const { url, options } = TOKEN_VALIDATE_POST(token);
           const response = await fetch(url, options);
+          console.log(response);
 
           if (!response.ok) throw new Error('Token inválido!');
 
