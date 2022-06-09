@@ -6,7 +6,7 @@ import { Error } from '../helper/Error';
 import { Loading } from '../helper/Loading';
 import '../../scss/FeedPhotos.scss';
 
-export const FeedPhotos = () => {
+export const FeedPhotos = ({ setModalPhoto }) => {
   const { data, loading, error, request } = useFetch();
 
   useEffect(() => {
@@ -24,7 +24,11 @@ export const FeedPhotos = () => {
     return (
       <ul className="feed anime-left">
         {data.map((photo) => (
-          <FeedPhotosItem key={photo.id} photo={photo} />
+          <FeedPhotosItem
+            key={photo.id}
+            photo={photo}
+            setModalPhoto={setModalPhoto}
+          />
         ))}
       </ul>
     );
