@@ -6,12 +6,13 @@ import { Error } from '../helper/Error';
 import { Loading } from '../helper/Loading';
 import { PhotoContent } from '../photo/PhotoContent';
 
-export const FeedModal = ({ photo }) => {
+export const FeedModal = ({ photo, setModalPhoto }) => {
   const { data, error, loading, request } = useFetch();
 
   const handleOutsideClick = (e) => {
-    console.log('Current: ', e.target);
-    console.log('Current Target: ', e.currentTarget);
+    // console.log('Current: ', e.target);
+    // console.log('Current Target: ', e.currentTarget);
+    if (e.target === e.currentTarget) setModalPhoto(null);
   };
 
   useEffect(() => {
