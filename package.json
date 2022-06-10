@@ -15,6 +15,7 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.4.0-pre.2",
     "sass": "^1.52.2",
+    "victory": "^36.5.0",
     "vite-plugin-svgr": "^2.1.0"
   },
   "devDependencies": {
