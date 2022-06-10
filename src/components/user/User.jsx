@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { NotFound } from '../../error/NotFound';
 import { UserContext } from '../../hooks/userContext';
 import { Feed } from '../feed/Feed';
 import { UserHeader } from './UserHeader';
@@ -16,6 +17,7 @@ export const User = () => {
         <Route path="/" element={<Feed user={data.id} />} />
         <Route path="postar" element={<UserPhotoPost />} />
         <Route path="estatisticas" element={<UserStats />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </section>
   );
