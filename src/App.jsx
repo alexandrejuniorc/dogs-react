@@ -7,6 +7,7 @@ import { Login } from './components/login/Login';
 import { User } from './components/user/User';
 import { UserStorage } from './hooks/userContext';
 import { Photo } from './components/photo/Photo';
+import { UserProfile } from './components/user/UserProfile';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
               }
             />
             <Route path="foto/:id" element={<Photo />} />
+            <Route path="perfil/:user" element={<UserProfile />} />
           </Routes>
           <Footer />
         </UserStorage>
