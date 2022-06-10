@@ -19,12 +19,27 @@
   }
 }
 
+.photoSingle.photoContent{
+  grid-template-columns: 1fr;
+  height: auto;
+}
+
 .detailsContent{
   padding: 2rem 2rem 0 2rem;
 }
 
+.photoSingle .detailsContent{
+  padding: 1rem 0px 0px 0px;
+}
+
 .imgContent{
   grid-row: 1/4;
+}
+
+.photoSingle .imgContent{
+  grid-row: 1;
+  border-radius: .4rem;
+  overflow: hidden;
 }
 
 .comments{

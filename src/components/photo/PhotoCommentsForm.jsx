@@ -5,7 +5,7 @@ import { useFetch } from '../../hooks/useFetch';
 import { Error } from '../helper/Error';
 import '../../scss/PhotoCommentsForm.scss';
 
-export const PhotoCommentsForm = ({ id, setComments }) => {
+export const PhotoCommentsForm = ({ id, setComments, single }) => {
   const [comment, setComment] = useState('');
   const { request, error } = useFetch();
 
@@ -20,7 +20,10 @@ export const PhotoCommentsForm = ({ id, setComments }) => {
   };
 
   return (
-    <form className="formComment" onSubmit={handleSubmit}>
+    <form
+      className={`${single ? 'photoSingle' : ''} formComment`}
+      onSubmit={handleSubmit}
+    >
       <textarea
         className="textarea"
         id="comment"

@@ -6,12 +6,12 @@ import { Image } from '../helper/Image';
 import { PhotoComments } from './PhotoComments';
 import { PhotoDelete } from './PhotoDelete';
 
-export const PhotoContent = ({ data }) => {
+export const PhotoContent = ({ data, single }) => {
   const { photo, comments } = data;
   const user = useContext(UserContext);
 
   return (
-    <div className="photoContent">
+    <div className={`${single ? 'photoSingle' : ''} photoContent`}>
       <div className="imgContent">
         <Image src={photo.src} alt={photo.title} />
         {/*  <img src={photo.src} alt={photo.title} /> */}
@@ -37,7 +37,7 @@ export const PhotoContent = ({ data }) => {
         </div>
       </div>
 
-      <PhotoComments id={photo.id} comments={comments} />
+      <PhotoComments single={single} id={photo.id} comments={comments} />
     </div>
   );
 };
