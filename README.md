@@ -1,6 +1,6 @@
 <h1 align="center">
-  <p align="center">Todo List com React + Typescript</p>
-  <a href="https://alexandrejuniorc.github.io/todo-ts/"><img src="./src/assets/readme.png" alt="HashtagFinder"></a>
+  <p align="center">Instadogs</p>
+  <a href="https://instadogs-ajr.netlify.app/"><img src="./src/assets/readme.png" alt="HashtagFinder"></a>
 </h1>
 
 <p align="center">
@@ -22,7 +22,7 @@ O Instadogs é um projeto com inspiração no instagram sendo somente para anima
 
 > Para acessar o site clique no botão abaixo.
 
-<a href="https://instadogs-ajr.netlify.app/login"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Clique Aqui"></a>
+<a href="https://instadogs-ajr.netlify.app/"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Clique Aqui"></a>
 
 ## Contato
 
